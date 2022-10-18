@@ -28,3 +28,5 @@
         <input type="text" name="email" placeholder="Email" class="rounded-xl">
     </div>
 </div>
+</body>
+</html>

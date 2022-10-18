@@ -13,7 +13,7 @@
     <title>Title</title>
 </head>
 <body>
-    <h1>this is room page !</h1>
+    <h1>this is test page !</h1>
     <%
         Room room = new Room();
         out.print(room.getDescription());

@@ -1,9 +1,9 @@
-<div class="absolute top-0 left-0 right-0 flex justify-between items-center text-white p-2">
+<div class="flex justify-between items-center bg-[#4B476A] text-white p-2">
     <jsp:include page="logo.jsp"/>
     <nav class="">
         <ul class="flex gap-20 text-sm font-medium">
-            <li><a href="${pageContext.request.contextPath}/" class="mb-2 border-b-2">Home</a></li>
-            <li><a href="room">Room &nbsp;&&nbsp; suites</a></li>
+            <li><a href="${pageContext.request.contextPath}/">Home</a></li>
+            <li><a href="room" class="mb-2 border-b-2">Room &nbsp;&&nbsp; suites</a></li>
             <li><a href="#">Events</a></li>
             <li><a href="#">Extras</a></li>
         </ul>

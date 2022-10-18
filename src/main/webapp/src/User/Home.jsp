@@ -6,4 +6,3 @@
 <jsp:include page="../components/roomComp.jsp"/>
 <jsp:include page="../components/eventComp.jsp"/>
 <jsp:include page="../components/customerOpinionComp.jsp"/>
-<jsp:include page="../components/footer.jsp"/>

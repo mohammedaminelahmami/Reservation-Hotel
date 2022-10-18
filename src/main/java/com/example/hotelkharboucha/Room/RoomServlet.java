@@ -79,7 +79,7 @@ public class RoomServlet extends HttpServlet {
     private void getAllRooms(HttpServletRequest req, HttpServletResponse resp) {
         List<Room> rooms = roomRepository.getAllRooms();
         req.setAttribute("rooms", rooms);
-        RequestDispatcher dispatcher = req.getRequestDispatcher("./src/User/testReservation.jsp");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("./src/User/roomAndSuites.jsp");
         try {
             dispatcher.forward(req, resp);
         } catch (ServletException | IOException e) {
