@@ -1,16 +1,16 @@
 package com.example.hotelkharboucha.Room;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.*;
 
+@WebServlet(name = "RoomServlet", value = "/room")
 public class RoomServlet extends HttpServlet {
-
     private RoomRepository roomRepository = new RoomRepository();
-   
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         int num = Integer.parseInt(req.getParameter("num"));
@@ -79,7 +79,7 @@ public class RoomServlet extends HttpServlet {
     private void getAllRooms(HttpServletRequest req, HttpServletResponse resp) {
         List<Room> rooms = roomRepository.getAllRooms();
         req.setAttribute("rooms", rooms);
-        RequestDispatcher dispatcher = req.getRequestDispatcher("jsp page where we gonna display the result");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("./src/User/testReservation.jsp");
         try {
             dispatcher.forward(req, resp);
         } catch (ServletException | IOException e) {

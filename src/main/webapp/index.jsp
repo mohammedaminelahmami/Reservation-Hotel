@@ -31,12 +31,8 @@
 </head>
     <body class="font-['Poppins']">
 
-        <!-- Client -->
+        <!-- Client (Default) -->
         <jsp:include page="src/User/Home.jsp"/>
-        <!------------>
-        
-        <!-- Admin -->
-
         <!------------>
     </body>
 </html>

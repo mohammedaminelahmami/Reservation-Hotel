@@ -61,7 +61,4 @@ public class Reservation {
     public void setIdExtra(int idExtra) {
         this.idExtra = idExtra;
     }
-    
-
-    
 }

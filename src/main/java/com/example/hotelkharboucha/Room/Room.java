@@ -5,6 +5,10 @@ public class Room {
     private int idType;
     private String status;
     private String description;
+    public Room()
+    {
+        //
+    }
     public Room(int num, int idType, String status, String description) {
         this.num = num;
         this.idType = idType;

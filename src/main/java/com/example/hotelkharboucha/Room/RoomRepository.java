@@ -13,49 +13,53 @@ public class RoomRepository {
     //Methode to add room
     public void addRoom(Room room) {
         try {
+            connection = DbConnecting.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO room VALUES(?, ?, ?, ?)");
             preparedStatement.setInt(1, room.getNum());
             preparedStatement.setInt(2, room.getIdType());
             preparedStatement.setString(3, room.getStatus());
             preparedStatement.setString(4, room.getDescription());
             preparedStatement.executeUpdate();
-        } catch (SQLException e) {
+        } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
     }
     //Method for updating room
     public void updateRoom(Room room) {
         try {
+            connection = DbConnecting.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement("UPDATE room SET idType = ?, status = ?, description = ? WHERE num = ?");
             preparedStatement.setInt(1, room.getIdType());
             preparedStatement.setString(2, room.getStatus());
             preparedStatement.setString(3, room.getDescription());
             preparedStatement.setInt(4, room.getNum());
             preparedStatement.executeUpdate();
-        } catch (SQLException e) {
+        } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
     }
     //Method for deleting room by number
     public void deleteRoom(int num) {
         try {
+            connection = DbConnecting.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement("DELETE FROM room WHERE num = ?");
             preparedStatement.setInt(1, num);
             preparedStatement.executeUpdate();
-        } catch (SQLException e) {
+        } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
     }
     //Method for get room by number
     public Room getRoom(int num) {
         try {
+            connection = DbConnecting.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM room WHERE num = ?");
             preparedStatement.setInt(1, num);
             ResultSet resultSet = preparedStatement.executeQuery();
             if (resultSet.next()) {
                 return new Room(resultSet.getInt(1), resultSet.getInt(2), resultSet.getString(3), resultSet.getString(4));
             }
-        } catch (SQLException e) {
+        } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
         return null;
@@ -64,6 +68,7 @@ public class RoomRepository {
     public List<Room> getAllRooms() {
         List<Room> rooms = null;
         try {
+            connection = DbConnecting.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM room");
             ResultSet resultSet = preparedStatement.executeQuery();
             rooms = new ArrayList<>();
@@ -71,7 +76,7 @@ public class RoomRepository {
                 rooms.add(new Room(resultSet.getInt(1), resultSet.getInt(2), resultSet.getString(3), resultSet.getString(4)));
             }
             
-        } catch (SQLException e) {
+        } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
         return rooms;
@@ -79,13 +84,14 @@ public class RoomRepository {
     //methode to check if room is exist
     public boolean isRoomExist(int num) {
         try {
+            connection = DbConnecting.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM room WHERE num = ?");
             preparedStatement.setInt(1, num);
             ResultSet resultSet = preparedStatement.executeQuery();
             if (resultSet.next()) {
                 return true;
             }
-        } catch (SQLException e) {
+        } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
         return false;

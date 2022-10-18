@@ -12,7 +12,6 @@ import java.util.List;
 public class ReservationServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        // super.doGet(req, resp);
         String action = req.getParameter("action");
         if(action == null)
         {
@@ -33,21 +32,18 @@ public class ReservationServlet extends HttpServlet {
     }
 
     private void checkReservation(HttpServletRequest req, HttpServletResponse resp) {
-    int id = Integer.parseInt(req.getParameter("id"));
-    ReservationRepository reservationRepository = new ReservationRepository();
-    Reservation reservation = reservationRepository.getClientReservation(id);
-    req.setAttribute("reservation", reservation);
-    RequestDispatcher dispatcher = req.getRequestDispatcher("jsp page where the reservation will be displayed");
-    try {
-        dispatcher.forward(req, resp);
-    } catch (ServletException e) {
-        e.printStackTrace();
-    } catch (IOException e) {
-        e.printStackTrace();
+        int id = Integer.parseInt(req.getParameter("id"));
+        ReservationRepository reservationRepository = new ReservationRepository();
+        Reservation reservation = reservationRepository.getClientReservation(id);
+        req.setAttribute("reservation", reservation);
+        RequestDispatcher dispatcher = req.getRequestDispatcher("jsp page where the reservation will be displayed");
+        try {
+            dispatcher.forward(req, resp);
+        } catch (ServletException | IOException e) {
+            e.printStackTrace();
+        }
     }
-}
     private void getAllReservations(HttpServletRequest req, HttpServletResponse resp) {
-
         // get all reservations from the database
         ReservationRepository reservationRepository = new ReservationRepository();
         List<Reservation> reservations = reservationRepository.getAllReservation();
@@ -57,12 +53,10 @@ public class ReservationServlet extends HttpServlet {
         RequestDispatcher dispatcher = req.getRequestDispatcher("jsp page where the reservations will be displayed");
         try {
             dispatcher.forward(req, resp);
-        } catch (ServletException e) {
+        } catch (ServletException | IOException e) {
             e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
+        }
     }
-}
     @Override
     protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         // super.doDelete(req, resp);
@@ -79,7 +73,5 @@ public class ReservationServlet extends HttpServlet {
         ReservationRepository reservationRepository = new ReservationRepository();
         reservationRepository.addReservation(newReservation);
         req.setAttribute("message", "Reservation added successfully");
-
-
     }
 }

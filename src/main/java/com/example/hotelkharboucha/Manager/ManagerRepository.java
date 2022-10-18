@@ -7,7 +7,6 @@ public class ManagerRepository {
     PreparedStatement preparedStatement = null;
     ResultSet resultSet = null;
 
-
     //Methode to check if manager exist
     public boolean isExist(String username) {
         boolean exist = false;
@@ -57,5 +56,3 @@ public class ManagerRepository {
         }
     }
 }
-
-
