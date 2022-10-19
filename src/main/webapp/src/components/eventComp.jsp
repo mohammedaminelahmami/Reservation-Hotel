@@ -11,6 +11,6 @@
         </div>
     </div>
     <div>
-        <img src="./src/assets/imgs/img4.png" class="rounded-3xl" style="width: 410px; height: 400px;box-shadow: 18px 20px #E9C8B8">
+        <img src="http://localhost/assets/imgs/img4.png" class="rounded-3xl" style="width: 410px; height: 400px;box-shadow: 18px 20px #E9C8B8">
     </div>
 </div>

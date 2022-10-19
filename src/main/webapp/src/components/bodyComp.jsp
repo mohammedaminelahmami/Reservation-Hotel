@@ -1,6 +1,6 @@
 <div>
     <div class="w-50">
-        <img src="./src/assets/imgs/imgHome.png" class="w-full" style="height: 740px" alt="body"/>
+        <img src="http://localhost/assets/imgs/imgHome.png" class="w-full" style="height: 740px" alt="imgHome"/>
     </div>
     <div class="absolute top-0 left-0 right-0 bottom-0 mt-40 text-white font-bold" style="text-align: center; font-size: 48px">
         <div>Perfect place for</div>

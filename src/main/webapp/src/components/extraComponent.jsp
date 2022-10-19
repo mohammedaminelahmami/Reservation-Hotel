@@ -1,6 +1,6 @@
 <div class="flex justify-evenly p-20 mt-14">
     <div>
-        <img src="./src/assets/imgs/img3.png" width="400" height="100" class="rounded-3xl">
+        <img src="http://localhost/assets/imgs/img3.png" width="400" height="100" class="rounded-3xl">
     </div>
 
     <div class="self-center flex flex-col gap-8">

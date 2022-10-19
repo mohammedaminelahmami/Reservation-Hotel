@@ -16,7 +16,7 @@
 
     <div>
         <div class="">
-            <img src="./src/assets/imgs/img2.png" class="w-100 rounded-3xl" style="box-shadow: 18px 20px #E9C8B8;" alt="">
+            <img src="http://localhost/assets/imgs/img2.png" class="w-100 rounded-3xl" style="box-shadow: 18px 20px #E9C8B8;" alt="">
         </div>
     </div>
 </div>

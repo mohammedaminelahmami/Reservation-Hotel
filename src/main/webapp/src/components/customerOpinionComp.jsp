@@ -6,18 +6,18 @@
         <!-- Customer -->
         <div class="flex self-center">
             <div class="flex flex-col items-center gap-5 p-5 bg-[#4B476A] text-white">
-                <div><img src="./src/assets/imgs/p1.png" class="rounded-full" width="100" height="100"></div>
+                <div><img src="http://localhost/assets/imgs/p1.png" class="rounded-full" width="100" height="100"></div>
                 <div class="text-sm">
                     <div>Very nice & comfortable place</div>
                     <div>To check in. Their service and</div>
                     <div>pricing are also good</div>
                 </div>
                 <div class="flex">
-                    <img src="./src/assets/imgs/star.png" width="20" height="20">
-                    <img src="./src/assets/imgs/star.png" width="20" height="20">
-                    <img src="./src/assets/imgs/star.png" width="20" height="20">
-                    <img src="./src/assets/imgs/star.png" width="20" height="20">
-                    <img src="./src/assets/imgs/star.png" width="20" height="20">
+                    <img src="http://localhost/assets/imgs/star.png" width="20" height="20">
+                    <img src="http://localhost/assets/imgs/star.png" width="20" height="20">
+                    <img src="http://localhost/assets/imgs/star.png" width="20" height="20">
+                    <img src="http://localhost/assets/imgs/star2.png" width="20" height="20">
+                    <img src="http://localhost/assets/imgs/star2.png" width="20" height="20">
                 </div>
             </div>
         </div>
@@ -26,18 +26,18 @@
         <!-- Customer -->
         <div class="flex" style="height: 310px">
             <div class="flex flex-col items-center gap-5 p-5 bg-[#1E1E1E] text-white">
-                <div><img src="./src/assets/imgs/pmid.jpg" class="rounded-full" width="100" height="100"></div>
+                <div><img src="http://localhost/assets/imgs/pmid.jpg" class="rounded-full" width="100" height="100"></div>
                 <div class="text-sm">
                     <div>I love the way they fullfill our visualization</div>
                     <div>To reality they beyonds did an excellent job</div>
                     <div>For their product user experience is so good</div>
                 </div>
                 <div class="flex">
-                    <img src="./src/assets/imgs/star.png" width="20" height="20">
-                    <img src="./src/assets/imgs/star.png" width="20" height="20">
-                    <img src="./src/assets/imgs/star.png" width="20" height="20">
-                    <img src="./src/assets/imgs/star.png" width="20" height="20">
-                    <img src="./src/assets/imgs/star.png" width="20" height="20">
+                    <img src="http://localhost/assets/imgs/star.png" width="20" height="20">
+                    <img src="http://localhost/assets/imgs/star.png" width="20" height="20">
+                    <img src="http://localhost/assets/imgs/star.png" width="20" height="20">
+                    <img src="http://localhost/assets/imgs/star2.png" width="20" height="20">
+                    <img src="http://localhost/assets/imgs/star2.png" width="20" height="20">
                 </div>
             </div>
         </div>
@@ -46,18 +46,18 @@
         <!-- Customer -->
         <div class="flex self-center">
             <div class="flex flex-col items-center gap-5 p-5 bg-[#4B476A] text-white">
-                <div><img src="./src/assets/imgs/p3.png" class="rounded-full" width="100" height="100"></div>
+                <div><img src="http://localhost/assets/imgs/p3.png" class="rounded-full" width="100" height="100"></div>
                 <div class="text-sm">
                     <div>Very nice & comfortable place</div>
                     <div>To check in. Their service and</div>
                     <div>pricing are also good</div>
                 </div>
                 <div class="flex">
-                    <img src="./src/assets/imgs/star.png" width="20" height="20">
-                    <img src="./src/assets/imgs/star.png" width="20" height="20">
-                    <img src="./src/assets/imgs/star.png" width="20" height="20">
-                    <img src="./src/assets/imgs/star.png" width="20" height="20">
-                    <img src="./src/assets/imgs/star.png" width="20" height="20">
+                    <img src="http://localhost/assets/imgs/star.png" width="20" height="20">
+                    <img src="http://localhost/assets/imgs/star.png" width="20" height="20">
+                    <img src="http://localhost/assets/imgs/star.png" width="20" height="20">
+                    <img src="http://localhost/assets/imgs/star2.png" width="20" height="20">
+                    <img src="http://localhost/assets/imgs/star2.png" width="20" height="20">
                 </div>
             </div>
         </div>

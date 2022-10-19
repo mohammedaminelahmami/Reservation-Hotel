@@ -2,6 +2,7 @@ package com.example.hotelkharboucha.Reservation;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -9,9 +10,11 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
+@WebServlet(name = "ReservationServlet", value = "/reservation")
 public class ReservationServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        /*
         String action = req.getParameter("action");
         if(action == null)
         {
@@ -29,6 +32,10 @@ public class ReservationServlet extends HttpServlet {
                 getAllReservations(req, resp);
                 break;
         }
+        */
+
+        resp.sendRedirect("./src/User/reservation.jsp");
+
     }
 
     private void checkReservation(HttpServletRequest req, HttpServletResponse resp) {

@@ -5,7 +5,7 @@
     <div class="flex">
         <!-- Start Card -->
         <div class="flex flex-col w-1/5 bg-[#1E1E1E] rounded-3xl m-10 mt-16">
-            <div class="w-100"><img src="./src/assets/imgs/r1.png" class="w-100 rounded-t-3xl" height="120"></div>
+            <div class="w-100"><img src="http://localhost/assets/imgs/r1.png" class="w-100 rounded-t-3xl" height="120"></div>
             <div class="text-white font-semibold self-center p-4">Single room</div>
             <div class="text-white text-xs self-center p-1">Lorem ipsum dolor sit amet</div>
             <div class="text-white text-xs self-center p-2">Lorem ipsum dolor sit amet, lorem</div>
@@ -20,7 +20,7 @@
 
         <!-- Start Card -->
         <div class="flex flex-col w-1/5 bg-[#1E1E1E] rounded-3xl m-10 mt-16">
-            <div class="w-100"><img src="./src/assets/imgs/r2.png" class="w-100 rounded-t-3xl" height="120"></div>
+            <div class="w-100"><img src="http://localhost/assets/imgs/r2.png" class="w-100 rounded-t-3xl" height="120"></div>
             <div class="text-white font-semibold self-center p-4">Double room</div>
             <div class="text-white text-xs self-center p-1">Lorem ipsum dolor sit amet</div>
             <div class="text-white text-xs self-center p-2">Lorem ipsum dolor sit amet, lorem</div>
@@ -35,7 +35,7 @@
 
         <!-- Start Card -->
         <div class="flex flex-col w-1/5 bg-[#1E1E1E] rounded-3xl m-10 mt-16">
-            <div class="w-100"><img src="./src/assets/imgs/r3.png" class="w-100 rounded-t-3xl" height="120"></div>
+            <div class="w-100"><img src="http://localhost/assets/imgs/r3.png" class="w-100 rounded-t-3xl" height="120"></div>
             <div class="text-white font-semibold self-center p-4">Triple room</div>
             <div class="text-white text-xs self-center p-1">Lorem ipsum dolor sit amet</div>
             <div class="text-white text-xs self-center p-2">Lorem ipsum dolor sit amet, lorem</div>
@@ -50,7 +50,7 @@
 
         <!-- Start Card -->
         <div class="flex flex-col w-1/5 bg-[#1E1E1E] rounded-3xl m-10 mt-16">
-            <div class="w-100"><img src="./src/assets/imgs/r4.png" class="w-100 rounded-t-3xl" height="120"></div>
+            <div class="w-100"><img src="http://localhost/assets/imgs/r4.png" class="w-100 rounded-t-3xl" height="120"></div>
             <div class="text-white font-semibold self-center p-4">Suites</div>
             <div class="text-white text-xs self-center p-1">Lorem ipsum dolor sit amet</div>
             <div class="text-white text-xs self-center p-2">Lorem ipsum dolor sit amet, lorem</div>

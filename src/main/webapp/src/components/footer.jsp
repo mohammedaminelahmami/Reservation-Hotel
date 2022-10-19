@@ -2,9 +2,9 @@
     <div class="flex flex-col items-center gap-14">
         <jsp:include page="logo.jsp"/>
         <div class="flex gap-2 ml-16">
-            <div><img src="./src/assets/imgs/ig.png" width="30" height="30"></div>
-            <div><img src="./src/assets/imgs/fb.png" width="30" height="30"></div>
-            <div><img src="./src/assets/imgs/tw.png" width="30" height="30"></div>
+            <div><img src="http://localhost/assets/imgs/ig.png" width="30" height="30"></div>
+            <div><img src="http://localhost/assets/imgs/fb.png" width="30" height="30"></div>
+            <div><img src="http://localhost/assets/imgs/tw.png" width="30" height="30"></div>
         </div>
     </div>
 
