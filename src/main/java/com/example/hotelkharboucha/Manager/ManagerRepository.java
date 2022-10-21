@@ -1,4 +1,5 @@
 package com.example.hotelkharboucha.Manager;
+import com.Database.DbConnecting.DbConnecting;
 
 import java.sql.*;
 
@@ -11,13 +12,14 @@ public class ManagerRepository {
     public boolean isExist(String username) {
         boolean exist = false;
         try {
+            connection = DbConnecting.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM manager WHERE username = ?");
             preparedStatement.setString(1, username);
             ResultSet resultSet = preparedStatement.executeQuery();
             if(resultSet.next()) {
                 exist = true;
             }
-        } catch (SQLException e) {
+        } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
     }
         return exist;
@@ -27,6 +29,7 @@ public class ManagerRepository {
         Manager manager = null;
         try {
             if(isExist(username)) {
+                connection = DbConnecting.getConnection();
                 PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM manager WHERE username = ? AND password = ?");
                 preparedStatement.setString(1, username);
                 preparedStatement.setString(2, password);
@@ -37,7 +40,9 @@ public class ManagerRepository {
             }
         } catch (SQLException e) {
             e.printStackTrace();
-    }
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
         return manager;
     }
 
@@ -46,6 +51,7 @@ public class ManagerRepository {
         try {
             if(!isExist(manager.getUsername()))
             {
+                connection = DbConnecting.getConnection();
                 PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO manager (username,password) VALUES(?, ?)");
                 preparedStatement.setString(1, manager.getUsername());
                 preparedStatement.setString(2, manager.getPassword());
@@ -53,6 +59,8 @@ public class ManagerRepository {
             }
         } catch (SQLException e) {
             e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
         }
     }
 }

@@ -14,7 +14,6 @@ import java.util.List;
 public class ReservationServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        /*
         String action = req.getParameter("action");
         if(action == null)
         {
@@ -32,10 +31,6 @@ public class ReservationServlet extends HttpServlet {
                 getAllReservations(req, resp);
                 break;
         }
-        */
-
-        resp.sendRedirect("./src/User/reservation.jsp");
-
     }
 
     private void checkReservation(HttpServletRequest req, HttpServletResponse resp) {
@@ -43,7 +38,7 @@ public class ReservationServlet extends HttpServlet {
         ReservationRepository reservationRepository = new ReservationRepository();
         Reservation reservation = reservationRepository.getClientReservation(id);
         req.setAttribute("reservation", reservation);
-        RequestDispatcher dispatcher = req.getRequestDispatcher("jsp page where the reservation will be displayed");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("jsp page");
         try {
             dispatcher.forward(req, resp);
         } catch (ServletException | IOException e) {
@@ -57,7 +52,7 @@ public class ReservationServlet extends HttpServlet {
         // add reservations to the request
         req.setAttribute("reservations", reservations);
         // send to the JSP page (view)
-        RequestDispatcher dispatcher = req.getRequestDispatcher("jsp page where the reservations will be displayed");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("./src/User/reservation.jsp");
         try {
             dispatcher.forward(req, resp);
         } catch (ServletException | IOException e) {

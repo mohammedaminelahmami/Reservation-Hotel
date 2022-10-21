@@ -2,7 +2,7 @@ package com.example.hotelkharboucha.Reservation;
 
 import java.sql.*;
 import java.util.*;
-// ??????? new
+
 import com.Database.DbConnecting.DbConnecting;
 
 public class ReservationRepository {
@@ -14,8 +14,7 @@ public class ReservationRepository {
     public boolean isAvailabe(int idRoom) {
         boolean available = false;
         try {
-            // ????
-            //connection = DbConnecting.getConnection();
+            connection = DbConnecting.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM room WHERE num = ?");
             preparedStatement.setInt(1, idRoom);
             ResultSet resultSet = preparedStatement.executeQuery();
@@ -28,7 +27,9 @@ public class ReservationRepository {
             }
         } catch (SQLException e) {
             e.printStackTrace();
-    }
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
         return available;
     }
 
@@ -38,7 +39,7 @@ public class ReservationRepository {
         try {
             if(!isAvailabe(reservation.getIdRoom()))
             {
-                //connection = DbConnecting.getConnection();
+                connection = DbConnecting.getConnection();
                 PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO reservation (idCl,idRoom,date_debut,date_fin,idExtra) VALUES(?, ?, ?, ?, ?)");
                 preparedStatement.setInt(1, reservation.getIdClient());
                 preparedStatement.setInt(2, reservation.getIdRoom());
@@ -49,6 +50,8 @@ public class ReservationRepository {
             }
         } catch (SQLException e) {
             e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
         }
     }
     //Method to get all reservation
@@ -56,7 +59,7 @@ public class ReservationRepository {
     public List<Reservation> getAllReservation() {
         List<Reservation> reservations = new ArrayList<>();
         try {
-            //connection = DbConnecting.getConnection();
+            connection = DbConnecting.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM reservation");
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
@@ -64,6 +67,8 @@ public class ReservationRepository {
             }
         } catch (SQLException e) {
             e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
         }
         return reservations;
     }
@@ -73,7 +78,7 @@ public class ReservationRepository {
     public Reservation getClientReservation(int id) {
         Reservation reservation = null;
         try {
-            //connection = DbConnecting.getConnection();
+            connection = DbConnecting.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM reservation WHERE id = ?");
             preparedStatement.setInt(1, id);
             ResultSet resultSet = preparedStatement.executeQuery();
@@ -82,6 +87,8 @@ public class ReservationRepository {
             }
         } catch (SQLException e) {
             e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
         }
         return reservation;
     }

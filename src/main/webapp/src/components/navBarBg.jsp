@@ -9,6 +9,6 @@
         </ul>
     </nav>
     <div class="mr-20">
-        <button type="submit" onclick="location.href='reservation'" class="bg-white text-[#4B476A] text-xs font-bold px-3 py-2 rounded-full">Reserve Now</button>
+        <a href="reservation" class="bg-white text-[#4B476A] text-xs font-bold px-3 py-2 rounded-full">Reserve Now</a>
     </div>
 </div>
