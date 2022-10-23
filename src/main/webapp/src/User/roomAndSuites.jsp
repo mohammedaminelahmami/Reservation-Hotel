@@ -28,7 +28,7 @@
                         <div class="text-white text-xs p-4">18 reviews</div>
                         <div class="text-gray-200 text-xs p-4">$80 / Day</div>
                         <div class="">
-                            <button type="submit" class="bg-[#4B476A] text-white text-xs font-semibold px-4 py-2 rounded-full">Book now</button>
+                            <button onclick="location.href='room-ava'" type="submit" class="bg-[#4B476A] text-white text-xs font-semibold px-4 py-2 rounded-full">Book now</button>
                         </div>
                     </div>
                 </div>
@@ -56,7 +56,7 @@
                         <div class="text-white text-xs p-4">18 reviews</div>
                         <div class="text-gray-200 text-xs p-4">$80 / Day</div>
                         <div class="">
-                            <button type="submit" class="bg-[#4B476A] text-white text-xs font-semibold px-4 py-2 rounded-full">Book now</button>
+                            <button onclick="location.href='room-ava'" type="submit" class="bg-[#4B476A] text-white text-xs font-semibold px-4 py-2 rounded-full">Book now</button>
                         </div>
                     </div>
                 </div>
@@ -84,7 +84,7 @@
                         <div class="text-white text-xs p-4">18 reviews</div>
                         <div class="text-gray-200 text-xs p-4">$80 / Day</div>
                         <div class="">
-                            <button type="submit" class="bg-[#4B476A] text-white text-xs font-semibold px-4 py-2 rounded-full">Book now</button>
+                            <button onclick="location.href='room-ava'" type="submit" class="bg-[#4B476A] text-white text-xs font-semibold px-4 py-2 rounded-full">Book now</button>
                         </div>
                     </div>
                 </div>
@@ -112,7 +112,7 @@
                         <div class="text-white text-xs p-4">18 reviews</div>
                         <div class="text-gray-200 text-xs p-4">$80 / Day</div>
                         <div class="">
-                            <button type="submit" class="bg-[#4B476A] text-white text-xs font-semibold px-4 py-2 rounded-full">Book now</button>
+                            <button onclick="location.href='room-ava'" type="submit" class="bg-[#4B476A] text-white text-xs font-semibold px-4 py-2 rounded-full">Book now</button>
                         </div>
                     </div>
                 </div>
